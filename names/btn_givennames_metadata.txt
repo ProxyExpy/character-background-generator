@@ -1,0 +1,8 @@
+#
+# This data is provided by behindthename.com and is licensed under CC BY-SA 4.0.
+# To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0
+#
+# Given names and their genders, exported from the behindthename.com database.
+# Mon, 02 Dec 2024 00:28:10 -0800
+#
+# name	gender
