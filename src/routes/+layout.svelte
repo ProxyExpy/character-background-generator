@@ -7,7 +7,7 @@
 <div class="flex min-h-screen bg-gray-100">
   <!-- Sidebar -->
   <aside class="w-64 bg-white shadow-md">
-    <div class="p-6 text-xl font-bold border-b">Backstory Tools</div>
+    <div class="p-6 text-xl font-bold border-b">Dungeoneerer</div>
     <nav class="flex flex-col p-4 space-y-2">
 		<a
 			href="/"

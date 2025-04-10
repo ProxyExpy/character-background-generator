@@ -31,6 +31,7 @@
       <li>TailwindCSS — for styling</li>
       <li>PostgreSQL — for fast, reliable data storage</li>
       <li>Liquibase — for schema versioning and migration management</li>
+      <li>Python - for some small utility scripts</li>
     </ul>
   </section>
 </main>

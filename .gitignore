@@ -21,3 +21,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+/liquibase/liquibase.properties
+liquibase/liquibase.properties

@@ -1,0 +1,1 @@
+CREATE SCHEMA character_generator;
