@@ -12,9 +12,11 @@ def parse_first_names(filepath):
             line = line.strip()
             if not line:
                 continue
-            parts = line.split()
-            name = parts[0]
-            gender = parts[1] if len(parts) > 1 else ''
+            try:
+                name, gender = line.rsplit(maxsplit=1)
+            except ValueError:
+                print(f"Skipping malformed line: {line}")
+                continue
             is_male = 'm' in gender
             is_female = 'f' in gender
             entries.append({

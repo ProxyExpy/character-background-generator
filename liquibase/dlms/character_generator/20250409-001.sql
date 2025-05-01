@@ -1,9 +1,9 @@
 INSERT INTO character_generator.genders(
-	name, subjective_pronoun, possesive_pronoun, objective_pronoun, reflexive_pronoun)
+	name, subjective_pronoun, possesive_pronoun, objective_pronoun, reflexive_pronoun, weight)
 	VALUES 
-    ('Non-Binary', 'they', 'them', 'their', 'themself'),
-    ('Female', 'she', 'her', 'her', 'herself'),
-    ('Male', 'he', 'him', 'his', 'himself');
+    ('Non-Binary', 'they', 'them', 'their', 'themself', 10),
+    ('Female', 'she', 'her', 'her', 'herself', 45),
+    ('Male', 'he', 'him', 'his', 'himself', 45);
 
 INSERT INTO character_generator.cultures(
 	name, culture_mod, skill_bonuses, native_literacy, foreign_literacy, items, environment, hobby, weight)
@@ -23,7 +23,7 @@ INSERT INTO character_generator.cultures(
         ('Civilized', 4, '[]', 
             30, '[]', '[]', 
             '[{"environment": "Wilderness", "weight": 1, "skills":[{"wildernessSurvivalRank": 2, "chance": 100}]}, {"environment": "Urban", "weight": 1, "skills":[{"urbanSurvivalRank": 2, "chance": 100}]}]', 
-            '[{"chance": 50}]', 1),
+            '[{"chance": 50}]', 3),
         ('Civilized-Decadent', 7, '[{"urbanSurvivalRank": 3, "chance": 100}]', 
             30, '[{"chance": 10}]', '[]', 
             '[{"environment": "Urban", "weight": 1, "skills":[]}]', 

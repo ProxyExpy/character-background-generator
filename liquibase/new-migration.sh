@@ -23,7 +23,7 @@ LAST_NUM=$(ls "$TARGET_DIR" | grep "^${DATE}-[0-9][0-9][0-9]" | sort | tail -n 1
 NEXT_NUM=$(printf "%03d" $((10#$LAST_NUM + 1)))
 
 # Prompt for description
-echo "Enter description (use dashes or underscores, no spaces, optional):"
+echo "Enter description (optional):"
 read DESCRIPTION
 
 FILENAME="${DATE}-${NEXT_NUM}.sql"
@@ -38,4 +38,4 @@ cat <<EOF > "$FULL_PATH"
 
 EOF
 
-echo "✅ Created: $FULL_PATH"
+echo "Created: $FULL_PATH"

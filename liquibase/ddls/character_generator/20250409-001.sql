@@ -5,7 +5,8 @@ CREATE TABLE character_generator.genders
     subjective_pronoun varchar(255) NOT NULL,
     possesive_pronoun  varchar(255) NOT NULL,
     objective_pronoun varchar(255) NOT NULL,
-    reflexive_pronoun varchar(255) NOT NULL
+    reflexive_pronoun varchar(255) NOT NULL,
+    weight INT NOT NULL default 1
 );
 
 CREATE TABLE character_generator.cultures
@@ -19,7 +20,7 @@ CREATE TABLE character_generator.cultures
     items jsonb,
     environment jsonb,
     hobby jsonb,
-    weight INT
+    weight INT NOT NULL default 1
 );
 
 CREATE TABLE character_generator.social_statuses
@@ -34,7 +35,7 @@ CREATE TABLE character_generator.social_statuses
     items jsonb,
     traits jsonb,
     relations jsonb,
-    weight INT
+    weight INT NOT NULL default 1
 );
 
 CREATE TABLE character_generator.names

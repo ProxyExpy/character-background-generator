@@ -50,26 +50,26 @@ Abbie,False,True,False
 Abbigail,False,True,False
 Abbondio,True,False,False
 Abby,False,True,False
-Abd,False,False,False
-Abd,True,False,False
-Abd,False,False,False
-Abd,False,False,False
-Abd,False,False,False
-Abd,True,False,False
-Abd,False,False,False
-Abd,False,True,False
-Abd,False,False,False
-Abd,False,False,False
-Abd,False,False,False
-Abd,True,False,False
-Abd,True,False,False
-Abd,False,False,False
-Abd,True,False,False
-Abd,False,False,False
-Abd,True,False,False
-Abd,True,False,False
-Abd,False,False,False
-Abd,True,False,False
+Abd al-Aziz,True,False,False
+Abd al-Hamid,True,False,False
+Abd al-Haqq,True,False,False
+Abd al-Ilah,True,False,False
+Abd al-Kader,True,False,False
+Abd al-Karim,True,False,False
+Abd Allah,True,False,False
+Abd al-Latif,True,False,False
+Abd al-Majid,True,False,False
+Abd al-Malik,True,False,False
+Abd al-Qadir,True,False,False
+Abd al-Rahim,True,False,False
+Abd al-Rahman,True,False,False
+Abd al-Rashid,True,False,False
+Abd al-Salam,True,False,False
+Abd al-Wali,True,False,False
+Abd ar-Rahim,True,False,False
+Abd ar-Rahman,True,False,False
+Abd ar-Rashid,True,False,False
+Abd as-Salam,True,False,False
 Abdastartos,True,False,False
 Abdastartus,True,False,False
 Abdel,True,False,False
@@ -98,11 +98,11 @@ Abduh,True,False,False
 Abdul,True,False,False
 Abdulah,True,False,False
 Abdülaziz,True,False,False
-Abdul,False,False,False
+Abdul Aziz,True,False,False
 Abdulaziz,True,False,False
-Abdul,True,False,False
+Abdul Hamid,True,False,False
 Abdülhamit,True,False,False
-Abdul,False,False,False
+Abdul Haq,True,False,False
 Abdülkadir,True,False,False
 Abdülkerim,True,False,False
 Abdulla,True,False,False
@@ -113,12 +113,12 @@ Abdüllatif,True,False,False
 Abdullo,True,False,False
 Abdulloh,True,False,False
 Abdullohi,True,False,False
-Abdul,True,False,False
+Abdul Rahman,True,False,False
 Abdurakhman,True,False,False
-Abdur,True,False,False
-Abdur,True,False,False
-Abdur,False,False,False
-Abdus,True,False,False
+Abdur Rahim,True,False,False
+Abdur Rahman,True,False,False
+Abdur Rashid,True,False,False
+Abdus Salam,True,False,False
 Abduweli,True,False,False
 Abe,True,False,False
 Abeba,False,True,False
@@ -196,9 +196,9 @@ Abrasha,True,False,False
 Abril,False,True,False
 Absalom,True,False,False
 Abu,True,False,False
-Abu,False,False,False
+Abu al-Fadl,True,False,False
 Abubakar,True,False,False
-Abu,False,False,False
+Abu Bakr,True,False,False
 Əbülfəz,True,False,False
 Abul-Fazl,True,False,False
 Abundio,True,False,False
@@ -630,7 +630,7 @@ Ahtahkakoop,True,False,False
 Ahti,True,False,False
 Ahu,False,True,False
 Ahuludegi,True,False,False
-Ahura,False,False,False
+Ahura Mazda,True,False,False
 Ahuva,False,True,False
 Ai,False,True,False
 Aias,True,False,False
@@ -831,8 +831,8 @@ Akvilė,False,True,False
 Al,True,False,False
 Ala,True,True,False
 Alaa,True,False,False
-Ala,False,False,False
-Ala,False,False,False
+Ala ad-Din,True,False,False
+Ala al-Din,True,False,False
 Alaattin,True,False,False
 Alaba,True,True,False
 Aladdin,True,False,False
@@ -1076,7 +1076,7 @@ Aliah,False,True,False
 Aliaksandr,True,False,False
 Aliaksandra,False,True,False
 Aliaksei,True,False,False
-Ali,False,True,False
+Ali Asaf,True,False,False
 Alibrand,True,False,False
 Alica,False,True,False
 Alice,False,True,False
@@ -1501,7 +1501,7 @@ An,True,True,False
 Ana,False,True,False
 Anabel,False,True,False
 Anabela,False,True,False
-Ana,False,False,False
+Ana Belén,False,True,False
 Anabella,False,True,False
 Anabelle,False,True,False
 Anaclet,True,False,False
@@ -1517,12 +1517,12 @@ Anahita,False,True,False
 Anaiah,True,False,False
 Anaís,False,True,False
 Anaïs,False,True,False
-Ana,False,False,False
+Ana Isabel,False,True,False
 Anaitis,False,True,False
 Anakin,True,False,False
 Anakletos,True,False,False
 Anakoni,True,False,False
-Ana,False,False,False
+Ana María,False,True,False
 Anamaria,False,True,False
 Anamarija,False,True,False
 Anan,True,True,False
@@ -1545,7 +1545,7 @@ Anargul,False,True,False
 Anargyros,True,False,False
 Anaru,True,False,False
 Anas,True,False,False
-Ana,False,True,False
+Ana Sofía,False,True,False
 Anass,True,False,False
 Anastácia,False,True,False
 Anastacia,False,True,False
@@ -1630,7 +1630,7 @@ Andreja,True,True,False
 Andrejs,True,False,False
 Andrés,True,False,False
 Andres,True,False,False
-Andrés,False,False,False
+Andrés Felipe,True,False,False
 Andressa,False,True,False
 Andreu,True,False,False
 Andrew,True,False,False
@@ -1711,7 +1711,7 @@ Angilbert,True,False,False
 Angiola,False,True,False
 Angiolo,True,False,False
 Angjelko,True,False,False
-Angra,False,False,False
+Angra Mainyu,True,False,False
 Angrboða,False,True,False
 Angus,True,False,False
 Angustias,False,True,False
@@ -1788,7 +1788,7 @@ Annalena,False,True,False
 Anna-Liisa,False,True,False
 Annalisa,False,True,False
 Annalise,False,True,False
-Anna,False,False,False
+Anna Maria,False,True,False
 Annamária,False,True,False
 Annamaria,False,True,False
 Annas,True,False,False
@@ -1935,7 +1935,7 @@ Antoninus,True,False,False
 António,True,False,False
 Antônio,True,False,False
 Antonio,True,False,False
-Antonio,False,False,False
+Antonio Pio,True,False,False
 Antonios,True,False,False
 Antonis,True,False,False
 Antoñita,False,True,False
@@ -2405,7 +2405,7 @@ Asclepius,True,False,False
 Asco,True,False,False
 Ásdís,False,True,False
 Asdrúbal,True,False,False
-Asdzáán,False,False,False
+Asdzáán Nádleehé,False,True,False
 Åse,False,True,False
 Aseem,True,False,False
 Asef,True,False,False
@@ -2938,9 +2938,9 @@ Baadur,True,False,False
 Baako,True,True,False
 Ba'al,True,False,False
 Baal,True,False,False
-Ba'al,True,False,False
+Ba'al Hammon,True,False,False
 Baal-Zebub,True,False,False
-Ba'al,False,False,False
+Ba'al Zevuv,True,False,False
 Baard,True,False,False
 Baatar,True,False,False
 Baba,True,False,False
@@ -3962,7 +3962,7 @@ Briana,False,True,False
 Brianna,False,True,False
 Brianne,False,True,False
 Briar,True,True,False
-Briar,False,False,False
+Briar Rose,False,True,False
 Brice,True,False,False
 Bricius,True,False,False
 Bríd,False,True,False
@@ -4114,8 +4114,8 @@ Burcu,False,True,False
 Burgheard,True,False,False
 Burgundy,False,True,False
 Burhan,True,False,False
-Burhan,False,False,False
-Burhan,False,False,False
+Burhan ad-Din,True,False,False
+Burhan al-Din,True,False,False
 Burhanettin,True,False,False
 Burhanuddin,True,False,False
 Burim,True,False,False
@@ -5375,7 +5375,7 @@ Cúán,True,False,False
 Cuauhtémoc,True,False,False
 Cuauhtemoc,True,False,False
 Cúc,False,True,False
-Cú,False,False,False
+Cú Chulainn,True,False,False
 Cúchulainn,True,False,False
 Cuidightheach,True,False,False
 Cuimín,True,False,False
@@ -6507,7 +6507,7 @@ Duje,True,False,False
 Duke,True,False,False
 Dukvakha,True,False,False
 Dulce,False,True,False
-Dulce,False,False,False
+Dulce María,False,True,False
 Dulcibella,False,True,False
 Dulcie,False,True,False
 Dulcinea,False,True,False
@@ -6562,7 +6562,7 @@ Dwi,True,True,False
 Dwight,True,False,False
 Dyan,False,True,False
 Dyaus,True,False,False
-Dyaus,False,False,False
+Dyaus Pita,True,False,False
 Dye,False,True,False
 Dylan,True,False,False
 Dylis,False,True,False
@@ -6662,7 +6662,7 @@ Ebrahim,True,False,False
 Ebrar,True,True,False
 Ebrima,True,False,False
 Ebru,False,True,False
-Ebu,False,False,False
+Ebu Bekir,True,False,False
 Ebubekir,True,False,False
 Ebuka,True,False,False
 Ecaterina,False,True,False
@@ -7790,7 +7790,7 @@ Evaldo,True,False,False
 Ēvalds,True,False,False
 Evaline,False,True,False
 Evalyn,False,True,False
-Eva,False,False,False
+Eva María,False,True,False
 Evan,True,False,False
 Evander,True,False,False
 Evandro,True,False,False
@@ -8041,11 +8041,11 @@ Fátima,False,True,False
 Fàtima,False,True,False
 Fatima,False,True,False
 Fatimə,False,True,False
-Fatima,False,False,False
+Fatima az-Zahra,False,True,False
 Fatimah,False,True,False
 Fatimata,False,True,False
 Fatimatou,False,True,False
-Fatima,False,False,False
+Fatima Zahra,False,True,False
 Fatime,False,True,False
 Fatin,True,True,False
 Fatjon,True,False,False
@@ -8487,9 +8487,9 @@ Francene,False,True,False
 Frances,False,True,False
 Francesc,True,False,False
 Francesca,False,True,False
-Francesca,False,False,False
+Francesca Pia,False,True,False
 Francesco,True,False,False
-Francesco,False,False,False
+Francesco Pio,True,False,False
 Francescu,True,False,False
 Francette,False,True,False
 Franci,True,False,False
@@ -8498,8 +8498,8 @@ Francis,True,True,False
 Francisc,True,False,False
 Francisca,False,True,False
 Francisco,True,False,False
-Francisco,False,False,False
-Francisco,False,False,False
+Francisco Javier,True,False,False
+Francisco José,True,False,False
 Franciscus,True,False,False
 Frančišek,True,False,False
 Frančiška,False,True,False
@@ -8541,7 +8541,7 @@ Franz,True,False,False
 Fränze,False,True,False
 Franzi,False,True,False
 Franziska,False,True,False
-Franz,False,False,False
+Franz Xaver,True,False,False
 Fraser,True,False,False
 Frauke,False,True,False
 Frazier,True,False,False
@@ -9182,10 +9182,10 @@ Giles,True,False,False
 Gilgamesh,True,False,False
 Gili,True,True,False
 Gill,False,True,False
-Gilla,False,False,False
+Gilla Críst,True,False,False
 Gilleasbaig,True,False,False
 Gilleasbuig,True,False,False
-Gille,False,False,False
+Gille Críst,True,False,False
 Gilles,True,False,False
 Gillespie,True,False,False
 Gillette,False,True,False
@@ -10870,8 +10870,8 @@ Huub,True,False,False
 Huw,True,False,False
 Huxley,True,False,False
 Huy,True,False,False
-Hvare,False,False,False
-Hvare,False,False,False
+Hvare Khshaeta,True,False,False
+Hvare Xshaeta,True,False,False
 Hwan,True,False,False
 Hyacinth,True,True,False
 Hyacintha,False,True,False
@@ -11299,7 +11299,7 @@ Inken,False,True,False
 Inkeri,False,True,False
 Inma,False,True,False
 Inmaculada,False,True,False
-Inmaculada,False,False,False
+Inmaculada Concepción,False,True,False
 Inna,True,True,False
 Innes,True,False,False
 Innocent,True,False,False
@@ -11716,10 +11716,10 @@ Iztok,True,False,False
 Izudin,True,False,False
 Izumi,False,True,False
 Izydor,True,False,False
-Izz,False,False,False
-Izz,False,False,False
+Izz ad-Din,True,False,False
+Izz al-Din,True,False,False
 İzzet,True,False,False
-Izz,False,False,False
+Izz ud-Din,True,False,False
 Izzy,True,True,False
 Jaagup,True,False,False
 Jaak,True,False,False
@@ -11845,7 +11845,7 @@ Jakub,True,False,False
 Jákup,True,False,False
 Jalə,False,True,False
 Jalal,True,False,False
-Jalal,False,False,False
+Jalal ad-Din,True,False,False
 Jale,False,True,False
 Jaleh,False,True,False
 Jalen,True,False,False
@@ -11858,8 +11858,8 @@ Jam,True,False,False
 Jamaal,True,False,False
 Jamaar,True,False,False
 Jamal,True,False,False
-Jamal,False,False,False
-Jamal,False,False,False
+Jamal ad-Din,True,False,False
+Jamal al-Din,True,False,False
 Jamaluddin,True,False,False
 Jamar,True,False,False
 JaMarcus,True,False,False
@@ -11927,7 +11927,7 @@ Janko,True,False,False
 Janna,False,True,False
 Jannah,False,True,False
 Jannat,False,True,False
-Jannatul,False,False,False
+Jannatul Ferdous,False,True,False
 Janne,True,True,False
 Janneke,False,True,False
 Jannette,False,True,False
@@ -12366,9 +12366,9 @@ Joanne,False,True,False
 Jóannes,True,False,False
 Joannes,True,False,False
 Joannicius,True,False,False
-Joan,False,False,False
+Joan Pau,True,False,False
 João,True,False,False
-João,False,False,False
+João Paulo,True,False,False
 Joãozinho,True,False,False
 Joaquim,True,False,False
 Joaquima,False,True,False
@@ -12425,7 +12425,7 @@ Jóhann,True,False,False
 Johann,True,False,False
 Jóhanna,False,True,False
 Johanna,False,True,False
-Johann,False,False,False
+Johann Baptist,True,False,False
 Johanne,False,True,False
 Johanneke,False,True,False
 Jóhannes,True,False,False
@@ -12439,7 +12439,7 @@ Johnie,True,True,False
 Johnna,False,True,False
 Johnnie,True,True,False
 Johnny,True,False,False
-John,False,False,False
+John Paul,True,False,False
 Johnson,True,False,False
 Jóhonaa'éí,True,False,False
 Joi,False,True,False
@@ -12549,8 +12549,8 @@ Josceline,False,True,False
 Joschka,True,False,False
 Jose,True,False,False
 José,True,True,False
-José,False,False,False
-José,False,False,False
+José Ángel,True,False,False
+José Antonio,True,False,False
 Joseba,True,False,False
 Josée,False,True,False
 Jósef,True,False,False
@@ -12562,12 +12562,12 @@ Josefin,False,True,False
 Josefína,False,True,False
 Josefina,False,True,False
 Josefine,False,True,False
-José,False,False,False
+José Luis,True,False,False
 Joselyn,False,True,False
-José,False,False,False
-José,False,False,False
-José,False,False,False
-José,False,False,False
+José Manuel,True,False,False
+José Mari,True,False,False
+José María,True,False,False
+José Maria,True,False,False
 Josèp,True,False,False
 Josep,True,False,False
 Josepa,False,True,False
@@ -12579,7 +12579,7 @@ Josephina,False,True,False
 Joséphine,False,True,False
 Josephine,False,True,False
 Josephus,True,False,False
-Josep,False,False,False
+Josep Maria,True,False,False
 Joses,True,False,False
 Josette,False,True,False
 Josey,True,True,False
@@ -12655,20 +12655,20 @@ Jream,False,True,False
 Ju,True,True,False
 Juan,True,True,False
 Juana,False,True,False
-Juan,False,False,False
-Juan,False,False,False
-Juan,False,False,False
+Juan Antonio,True,False,False
+Juan Bautista,True,False,False
+Juan Carlos,True,False,False
 Juancho,True,False,False
 Juanfran,True,False,False
-Juan,False,False,False
+Juan Francisco,True,False,False
 Juanita,False,True,False
 Juanito,True,False,False
-Juan,False,False,False
+Juan José,True,False,False
 Juanma,True,False,False
-Juan,False,False,False
+Juan Manuel,True,False,False
 Juanne,True,False,False
-Juan,False,False,False
-Juan,False,False,False
+Juan Pablo,True,False,False
+Juan Pedro,True,False,False
 Juantxo,True,False,False
 Jubal,True,False,False
 Juda,True,False,False
@@ -12727,8 +12727,8 @@ Julijana,False,True,False
 Julinha,False,True,False
 Júlio,True,False,False
 Julio,True,False,False
-Júlio,False,False,False
-Julio,False,False,False
+Júlio César,True,False,False
+Julio César,True,False,False
 Juliska,False,True,False
 Julissa,False,True,False
 Julita,False,True,False
@@ -12965,9 +12965,9 @@ Kəmal,True,False,False
 Kamal,True,False,False
 Kəmalə,False,True,False
 Kamala,True,True,False
-Kamal,False,False,False
+Kamal ad-Din,True,False,False
 Kamalani,True,True,False
-Kamal,False,False,False
+Kamal ud-Din,True,False,False
 Kamari,True,True,False
 Kamaria,False,True,False
 Kamatchi,False,True,False
@@ -13490,7 +13490,7 @@ Khava,False,True,False
 Khawaja,True,False,False
 Khayr,True,False,False
 Khayra,False,True,False
-Khayr,False,False,False
+Khayr ad-Din,True,False,False
 Khayrat,True,True,False
 Khayri,True,False,False
 Khayriyya,False,True,False
@@ -13928,7 +13928,7 @@ Ksawery,True,False,False
 Ksenia,False,True,False
 Ksenija,False,True,False
 Kseniya,False,True,False
-Kshathra,False,False,False
+Kshathra Vairya,True,False,False
 Kshitij,True,False,False
 Kshitija,False,True,False
 Ksyusha,False,True,False
@@ -15098,7 +15098,7 @@ Luís,True,False,False
 Luis,True,False,False
 Luísa,False,True,False
 Luisa,False,True,False
-Luis,False,False,False
+Luis Ángel,True,False,False
 Luise,False,True,False
 Luíseach,False,True,False
 Luisella,False,True,False
@@ -15273,7 +15273,7 @@ Macario,True,False,False
 Macarius,True,False,False
 Macaulay,True,False,False
 Macauley,True,False,False
-Mac,False,False,False
+Mac Beatha,True,False,False
 Macbeth,True,False,False
 Macdara,True,False,False
 Macey,False,True,False
@@ -15353,16 +15353,16 @@ Mæja,False,True,False
 Maël,True,False,False
 Mael,True,False,False
 Maela,False,True,False
-Máel,True,False,False
+Máel Coluim,True,False,False
 Maeleachlainn,True,False,False
 Maeleth,False,True,False
 Maelgwn,True,False,False
 Maëlie,False,True,False
-Máel,False,False,False
+Máel Ísu,True,False,False
 Maëlle,False,True,False
-Máel,False,False,False
-Máel,False,False,False
-Máel,False,False,False
+Máel Máedóc,True,False,False
+Máel Sechlainn,True,False,False
+Máel Sechnaill,True,False,False
 Maëlys,False,True,False
 Maera,False,True,False
 Mærwine,True,False,False
@@ -15674,7 +15674,7 @@ Manya,False,True,False
 Manyara,False,True,False
 Mao,False,True,False
 Maoilios,True,False,False
-Maol,True,False,False
+Maol Chaluim,True,False,False
 Maolsheachlann,True,False,False
 Ma'ome,True,False,False
 Maor,True,False,False
@@ -15796,44 +15796,44 @@ Mari,False,True,False
 Mária,False,True,False
 María,True,True,False
 Maria,True,True,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
+María Ángeles,False,True,False
+María Auxiliadora,False,True,False
+María Belén,False,True,False
 Mariabella,False,True,False
-María,True,False,False
-Maria,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-Maria,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
-Maria,False,False,False
-Maria,False,False,False
-María,False,False,False
+María Carmen,False,True,False
+Maria Chiara,False,True,False
+María Concepción,False,True,False
+María Cristina,False,True,False
+María Cruz,False,True,False
+María de Jesús,False,True,False
+María de la Cruz,False,True,False
+María de las Mercedes,False,True,False
+María del Carmen,False,True,False
+María del Mar,False,True,False
+Maria del Mar,False,True,False
+María de los Ángeles,False,True,False
+María de los Dolores,False,True,False
+María Dolores,False,True,False
+María Elena,False,True,False
+María Fernanda,False,True,False
+Maria Francesca,False,True,False
+Maria Grazia,False,True,False
+María Guadalupe,False,True,False
 Mariah,False,True,False
-María,False,False,False
-María,False,False,False
-Maria,False,False,False
-María,False,False,False
-Maria,False,False,False
-María,False,True,False
-Maria,False,False,False
-María,False,False,False
-María,False,False,False
+María Isabel,False,True,False
+María Jesús,False,True,False
+Maria João,False,True,False
+María José,False,True,False
+Maria José,False,True,False
+María Josefa,False,True,False
+Maria Josep,False,True,False
+María Lourdes,False,True,False
+María Luisa,False,True,False
 Mariam,False,True,False
 Mariama,False,True,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
+María Manuela,False,True,False
+María Mar,False,True,False
+María Mercedes,False,True,False
 Mariami,False,True,False
 Mariamne,False,True,False
 Mariamu,False,True,False
@@ -15842,7 +15842,7 @@ Marian,True,True,False
 Mariana,False,True,False
 Marianela,False,True,False
 Mariangela,False,True,False
-María,False,False,False
+María Nieves,False,True,False
 Marianita,False,True,False
 Mariann,False,True,False
 Marianna,False,True,False
@@ -15850,15 +15850,15 @@ Marianne,False,True,False
 Mariano,True,False,False
 Marianthi,False,True,False
 Marianus,True,False,False
-Maria,False,False,False
+Maria Pia,False,True,False
 Mariapia,False,True,False
-María,False,False,False
-María,False,False,False
-María,False,False,False
+María Pilar,False,True,False
+María Rosa,False,True,False
+María Rosario,False,True,False
 Mariasole,False,True,False
-María,False,False,False
-María,False,False,False
-Maria,False,False,False
+María Soledad,False,True,False
+María Teresa,False,True,False
+Maria Vittoria,False,True,False
 Mariazinha,False,True,False
 Maribel,False,True,False
 Marica,False,True,False
@@ -16084,20 +16084,20 @@ Maryam,False,True,False
 Maryamu,False,True,False
 Maryan,False,True,False
 Maryana,False,True,False
-Mary,False,False,False
+Mary Ann,False,True,False
 Maryann,False,True,False
-Mary,False,False,False
+Mary Anne,False,True,False
 Maryanne,False,True,False
 Marybelle,False,True,False
-Mary,False,False,False
+Mary Beth,False,True,False
 Marybeth,False,True,False
 Maryia,False,True,False
-Mary,False,False,False
-Mary,False,False,False
+Mary Jane,False,True,False
+Mary Jo,False,True,False
 Maryla,False,True,False
 Marylène,False,True,False
 Maryline,False,True,False
-Mary,False,False,False
+Mary Lou,False,True,False
 Marylou,False,True,False
 Marylu,False,True,False
 Marylyn,False,True,False
@@ -16400,7 +16400,7 @@ Mehetav'el,False,True,False
 Mehitabel,False,True,False
 Mehmed,True,False,False
 Mehmet,True,False,False
-Mehmet,False,False,False
+Mehmet Ali,True,False,False
 Mehmood,True,False,False
 Mehmûd,True,False,False
 Mehmud,True,False,False
@@ -16708,7 +16708,7 @@ Miglė,False,True,False
 Mignon,False,True,False
 Miguel,True,False,False
 Miguela,False,True,False
-Miguel,False,False,False
+Miguel Ángel,True,False,False
 Miguelito,True,False,False
 Mi-Gyeong,False,True,False
 Miha,True,False,False
@@ -17221,13 +17221,13 @@ Muhamadkhan,True,False,False
 Muhamed,True,False,False
 Muhamet,True,False,False
 Muhammad,True,False,False
-Muhammad,False,False,False
+Muhammad Ali,True,False,False
 Muhammadali,True,False,False
 Muhammadu,True,False,False
 Muhammadyusuf,True,False,False
 Muhammed,True,False,False
-Muhammed,False,False,False
-Muhammed,True,False,False
+Muhammed Ali,True,False,False
+Muhammed Emin,True,False,False
 Muhammet,True,False,False
 Muḥand,True,False,False
 Muhemmet,True,False,False
@@ -18297,7 +18297,7 @@ Nunziatina,False,True,False
 Nunzio,True,False,False
 Nur,True,True,False
 Nura,False,True,False
-Nur,False,False,False
+Nur ad-Din,True,False,False
 Nurasyl,True,False,False
 Nuray,False,True,False
 Nurbek,True,False,False
@@ -18633,8 +18633,8 @@ Ombeline,False,True,False
 Omega,True,True,False
 Ömer,True,False,False
 Omer,True,True,False
-Ömer,False,True,False
-Ömer,False,False,False
+Ömer Asaf,True,False,False
+Ömer Faruk,True,False,False
 Omid,True,True,False
 Omiros,True,False,False
 Omobolanle,False,True,False
@@ -19830,7 +19830,7 @@ Qays,True,False,False
 Qemal,True,False,False
 Qemu'el,True,False,False
 Qenan,True,False,False
-Qeren,False,False,False
+Qeren Happukh,False,True,False
 Qetura,False,True,False
 Qetzi'a,False,True,False
 Qiana,False,True,False
@@ -20814,7 +20814,7 @@ Rosaline,False,True,False
 Rosalva,False,True,False
 Rosalyn,False,True,False
 Rosalynne,False,True,False
-Rosa,False,False,False
+Rosa María,False,True,False
 Rosamond,False,True,False
 Rosamund,False,True,False
 Rosana,False,True,False
@@ -21103,7 +21103,7 @@ Saar,True,True,False
 Saara,False,True,False
 Saba,True,True,False
 Sabah,True,True,False
-Sabah,False,False,False
+Sabah ad-Din,True,False,False
 Sabahattin,True,False,False
 Sabahudin,True,False,False
 Şaban,True,False,False
@@ -21201,7 +21201,7 @@ Sa'ida,False,True,False
 Səidə,False,True,False
 Saida,False,True,False
 Saif,True,False,False
-Saif,False,False,False
+Saif al-Din,True,False,False
 Saiful,True,False,False
 Saifullah,True,False,False
 Saige,False,True,False
@@ -21234,8 +21234,8 @@ Sal,True,True,False
 Salacia,False,True,False
 Saladin,True,False,False
 Salah,True,False,False
-Salah,False,False,False
-Salah,False,False,False
+Salah ad-Din,True,False,False
+Salah al-Din,True,False,False
 Salaheddine,True,False,False
 Salama,True,True,False
 Salamatu,False,True,False
@@ -21531,7 +21531,7 @@ Saxon,True,False,False
 Sayaka,False,True,False
 Sayed,True,False,False
 Sayen,False,True,False
-Sayf,False,False,False
+Sayf ad-Din,True,False,False
 Sayfullah,True,False,False
 Saylor,False,True,False
 Saynab,False,True,False
@@ -21916,8 +21916,8 @@ Shamil,True,False,False
 Shamira,False,True,False
 Shammuramat,False,True,False
 Shams,True,True,False
-Shams,False,False,False
-Shams,False,False,False
+Shams ad-Din,True,False,False
+Shams al-Din,True,False,False
 Shamsuddin,True,False,False
 Shamus,True,False,False
 Shan,False,True,False
@@ -22543,7 +22543,7 @@ Snježana,False,True,False
 Snorre,True,False,False
 Snorri,True,False,False
 Snow,False,True,False
-Snow,False,False,False
+Snow White,False,True,False
 Soan,True,False,False
 Sobek,True,False,False
 Sobekhotep,True,False,False
@@ -22733,7 +22733,7 @@ Sree,True,True,False
 Sri,True,True,False
 Sridevi,False,True,False
 Srinivas,True,False,False
-Sri,False,False,False
+Sri Wahyuni,False,True,False
 Sriyani,False,True,False
 Sroel,True,False,False
 Srosh,True,False,False
@@ -22886,7 +22886,7 @@ Stipo,True,False,False
 Stirling,True,False,False
 Stithulf,True,False,False
 Stjepan,True,False,False
-St,False,False,False
+St John,True,False,False
 Stoja,False,True,False
 Stojan,True,False,False
 Stojko,True,False,False
@@ -23486,7 +23486,7 @@ Tawnee,False,True,False
 Tawnie,False,True,False
 Tawny,False,True,False
 Tawnya,False,True,False
-Taxma,False,False,False
+Taxma Urupi,True,False,False
 Tayanita,False,True,False
 Tayeb,True,False,False
 Tayebeh,False,True,False
@@ -24004,7 +24004,7 @@ Tinek,True,False,False
 Tineke,False,True,False
 Ting,False,True,False
 Tinkara,False,True,False
-Tinker,False,False,False
+Tinker Bell,False,True,False
 Tino,True,False,False
 Tintin,True,False,False
 Tinúviel,False,True,False
@@ -24585,7 +24585,7 @@ Umid,True,False,False
 Umida,False,True,False
 Ümit,True,False,False
 Umm,False,True,False
-Umm,True,False,False
+Umm Kulthum,False,True,False
 Ümmügülsüm,False,True,False
 Ümran,True,False,False
 Umran,True,False,False
@@ -25334,7 +25334,7 @@ Vlastislav,True,False,False
 Vlatka,False,True,False
 Vlatko,True,False,False
 Voestaa'e,False,True,False
-Vohu,False,False,False
+Vohu Manah,True,False,False
 Voirrey,False,True,False
 Voitto,True,False,False
 Vojislav,True,False,False
@@ -25856,7 +25856,7 @@ Xornislavŭ,True,False,False
 Xosé,True,False,False
 Xquenda,True,True,False
 Xquic,False,True,False
-Xshathra,False,False,False
+Xshathra Vairya,True,False,False
 Xshayarsha,True,False,False
 Xuân,True,True,False
 Xuan,True,False,False
@@ -26112,8 +26112,8 @@ Yıldırım,True,False,False
 Yıldız,False,True,False
 Yılmaz,True,False,False
 Yima,True,False,False
-Yima,False,False,False
-Yima,False,False,False
+Yima Khshaeta,True,False,False
+Yima Xshaeta,True,False,False
 Yin,True,True,False
 Ying,True,True,False
 Yinuo,True,True,False
@@ -26275,7 +26275,7 @@ Yunis,True,False,False
 Yun-Seo,True,True,False
 Yunuen,True,True,False
 Yunus,True,False,False
-Yunus,True,False,False
+Yunus Emre,True,False,False
 Yura,True,False,False
 Yuraq,True,True,False
 Yurena,False,True,False
@@ -26442,7 +26442,7 @@ Zayden,True,False,False
 Zayn,True,False,False
 Zayna,False,True,False
 Zaynab,False,True,False
-Zayn,False,False,False
+Zayn ad-Din,True,False,False
 Zayne,True,False,False
 Zazil,False,True,False
 Zbigniew,True,False,False
@@ -26503,8 +26503,8 @@ Zelma,False,True,False
 Zelophehad,True,False,False
 Zelpha,False,True,False
 Zeltzin,False,True,False
-Zé,False,False,False
-Zé,False,False,False
+Zé Manel,True,False,False
+Zé Maria,True,False,False
 Zemfira,False,True,False
 Zena,False,True,False
 Zenaida,False,True,False
@@ -26617,12 +26617,12 @@ Zivit,False,True,False
 Živka,False,True,False
 Živko,True,False,False
 Ziya,True,False,False
-Ziya,False,False,False
-Ziya,False,False,False
+Ziya ad-Din,True,False,False
+Ziya al-Din,True,False,False
 Ziyad,True,False,False
 Ziyaeddin,True,False,False
 Ziyaettin,True,False,False
-Ziya,True,False,False
+Ziya ur-Rahman,True,False,False
 Ziynet,False,True,False
 Zlata,False,True,False
 Zlatan,True,False,False
