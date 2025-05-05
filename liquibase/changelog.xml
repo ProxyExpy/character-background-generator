@@ -12,5 +12,8 @@
     <include file="ddls/character_generator/20250409-001.sql" relativeToChangelogFile="true" />
     <include file="dlms/character_generator/20250409-001.sql" relativeToChangelogFile="true" />
     <include file="dlms/character_generator/20250409-002.xml" relativeToChangelogFile="true" />
+    <include file="ddls/character_generator/20250501-001.sql" relativeToChangelogFile="true" />
+    <include file="dlms/character_generator/20250501-001.sql" relativeToChangelogFile="true" />
+
 
 </databaseChangeLog>

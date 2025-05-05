@@ -1,3 +1,55 @@
+interface AbilityModifiers {
+  str?: number;
+  dex?: number;
+  con?: number;
+  int?: number;
+  wis?: number;
+  cha?: number;
+  any?: number; // For Half-Elves, etc.
+}
+
+interface SkillBonus {
+  skill: string;
+  rank: number | { dice?: string };
+}
+
+interface TraitEntry {
+  trait: string;
+  source?: string;
+  chance?: number;
+}
+
+interface SocialEvent {
+  culture?: string;
+  chance: number;
+  when?: "child" | "adolescent" | "adult";
+  event_table?: string;
+  grants?: { skill: string; rank: number }[];
+}
+
+interface ItemGrant {
+  item: string;
+  quantity?: string; // e.g., "1d3"
+  value_multiplier?: number; // e.g., 10x
+}
+
+interface LiteracyMiscEntry {
+  chance: number;
+  effect: string;
+}
+
+interface EnvironmentSkillEntry {
+  chance: number;
+  urbanSurvivalRank?: number;
+  wildernessSurvivalRank?: number;
+}
+
+export interface EnvironmentEntry {
+  environment: "Urban" | "Wilderness" | string; // Add more types if needed
+  weight: number; // Used for weighted random selection
+  skills: EnvironmentSkillEntry[];
+}
+
 export interface Gender {
     id: number;
     name: string;
@@ -16,7 +68,40 @@ export interface Culture {
     native_literacy: number;
     foreign_literacy: JSON;
     items: JSON;
-    environment: JSON;
+    environment: EnvironmentEntry[] | EnvironmentEntry;
     hobby: JSON;
     weight: number;
+}
+
+export interface Race {
+  id: number;
+  name: string;
+  source: string;
+  ability_modifiers: AbilityModifiers;  
+  size: "Small" | "Medium" | "Large";
+  type: string;
+  base_speed: number;
+  languages: {
+    automatic: string[];
+    bonus: string[];
+  };
+  racial_traits: string[];
+  favored_classes: string[];
+  weight: number;
+}
+
+export interface SocialStatus {
+  id: number;
+  name: string;
+  social_mod: number;
+  skill_bonuses: SkillBonus[];
+  traits: TraitEntry[]; 
+  events: SocialEvent[]; 
+  items: ItemGrant[];
+  special_instructions: string | null;
+  money_multiplier: number;
+  literacy_modifier: number;
+  literacy_override: number;
+  literacy_misc: LiteracyMiscEntry[];
+  weight: number;
 }
