@@ -5,7 +5,7 @@ interface AbilityModifiers {
   int?: number;
   wis?: number;
   cha?: number;
-  any?: number; // For Half-Elves, etc.
+  any?: number;
 }
 
 interface SkillBonus {
@@ -29,8 +29,9 @@ interface SocialEvent {
 
 interface ItemGrant {
   item: string;
-  quantity?: string; // e.g., "1d3"
-  value_multiplier?: number; // e.g., 10x
+  quantity?: string | number;
+  chance?: number;
+  value_multiplier?: number;
 }
 
 interface LiteracyMiscEntry {
@@ -51,26 +52,26 @@ export interface EnvironmentEntry {
 }
 
 export interface Gender {
-    id: number;
-    name: string;
-    subjective_pronoun: string;
-    possessive_pronoun: string;
-    objective_pronoun: string;
-    reflexive_pronoun: string;
-    weight: number;
-  }
-  
+  id: number;
+  name: string;
+  subjective_pronoun: string;
+  possessive_pronoun: string;
+  objective_pronoun: string;
+  reflexive_pronoun: string;
+  weight: number;
+}
+
 export interface Culture {
-    id: number;
-    name: string;
-    culture_mod: number;
-    skill_bonuses: JSON;
-    native_literacy: number;
-    foreign_literacy: JSON;
-    items: JSON;
-    environment: EnvironmentEntry[] | EnvironmentEntry;
-    hobby: JSON;
-    weight: number;
+  id: number;
+  name: string;
+  culture_mod: number;
+  skill_bonuses: JSON;
+  native_literacy: number;
+  foreign_literacy: JSON;
+  items: JSON;
+  environment: EnvironmentEntry[] | EnvironmentEntry;
+  hobby: JSON;
+  weight: number;
 }
 
 export interface Race {
@@ -78,7 +79,7 @@ export interface Race {
   name: string;
   source: string;
   ability_modifiers: AbilityModifiers;  
-  size: "Small" | "Medium" | "Large";
+  size: "Fine" | "Diminutive" | "Tiny" | "Small" | "Medium" | "Large" | "Huge" | "Gargantuan" | "Colossal";
   type: string;
   base_speed: number;
   languages: {
@@ -88,6 +89,11 @@ export interface Race {
   racial_traits: string[];
   favored_classes: string[];
   weight: number;
+}
+
+export interface SocialStatusModifiers {
+  cultureMod: number;
+  tiMod: number;
 }
 
 export interface SocialStatus {
@@ -103,5 +109,5 @@ export interface SocialStatus {
   literacy_modifier: number;
   literacy_override: number;
   literacy_misc: LiteracyMiscEntry[];
-  weight: number;
+  upper_bound: number;
 }

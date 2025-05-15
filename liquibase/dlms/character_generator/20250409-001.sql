@@ -2,8 +2,8 @@ INSERT INTO character_generator.genders(
 	name, subjective_pronoun, possesive_pronoun, objective_pronoun, reflexive_pronoun, weight)
 	VALUES 
     ('Non-Binary', 'they', 'them', 'their', 'themself', 10),
-    ('Female', 'she', 'her', 'her', 'herself', 45),
-    ('Male', 'he', 'him', 'his', 'himself', 45);
+    ('Female', 'she', 'her', 'her', 'herself', 48),
+    ('Male', 'he', 'him', 'his', 'himself', 47);
 
 INSERT INTO character_generator.cultures(
 	name, culture_mod, skill_bonuses, native_literacy, foreign_literacy, items, environment, hobby, weight)
