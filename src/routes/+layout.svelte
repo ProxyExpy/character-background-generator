@@ -1,41 +1,42 @@
-<script>
-  import { page } from '$app/stores';
+<script lang="ts">
   import '../app.css';
+  import { page } from '$app/stores';
+  import { Sidebar, SidebarGroup, SidebarItem } from 'flowbite-svelte';
+  import {
+    HomeSolid,
+    BarsOutline,
+    InfoCircleOutline
+  } from 'flowbite-svelte-icons';
+
+  // Path-aware reactive highlight
   $: currentPath = $page.url.pathname;
+
+  // Icon mapping
+
+  const navItems = [
+    { name: 'Home', href: '/', icon: HomeSolid },
+    { name: 'Character Generator', href: '/generator', icon: BarsOutline },
+    { name: 'Acknowledgements', href: '/acknowledgements', icon: InfoCircleOutline }
+  ];
 </script>
 
-<div class="flex min-h-screen bg-gray-100">
-  <!-- Sidebar -->
-  <aside class="w-64 bg-white shadow-md">
-    <div class="p-6 text-xl font-bold border-b">Dungeoneerer</div>
-    <nav class="flex flex-col p-4 space-y-2">
-		<a
-			href="/"
-			class="px-4 py-2 rounded hover:bg-indigo-100 transition 
-			font-medium 
-			{currentPath === '/' ? 'bg-indigo-200 text-indigo-900' : 'text-gray-800'}"
-		>
-			Home
-		</a>
-		<a
-			href="/generate"
-			class="px-4 py-2 rounded hover:bg-indigo-100 transition 
-			font-medium 
-			{currentPath === '/generate' ? 'bg-indigo-200 text-indigo-900' : 'text-gray-800'}"
-		>
-			Character Generator
-		</a>
-		<a
-			href="/acknowledgements"
-			class="px-4 py-2 rounded hover:bg-indigo-100 transition font-medium
-			{currentPath === '/acknowledgements' ? 'bg-indigo-200 text-indigo-900' : 'text-gray-800'}"
-		>
-			Acknowledgements
-		</a>
-    </nav>
-  </aside>
+<div class="flex min-h-screen bg-gray-50 dark:bg-gray-900">
+  <Sidebar
+    class="relative w-64 h-screen border-r border-gray-200 dark:border-gray-700"
+    activeClass="bg-indigo-100 text-indigo-900 dark:bg-indigo-700 dark:text-white font-semibold"
+    nonActiveClass="text-gray-800 dark:text-gray-300"
+  >
+    <SidebarGroup>
+      {#each navItems as item}
+        <SidebarItem href={item.href} label={item.name} active={currentPath === item.href}>
+          {#snippet icon()}
+            <svelte:component this={item.icon} class="text-gray-500 dark:text-gray-400" />
+          {/snippet}
+        </SidebarItem>
+      {/each}
+    </SidebarGroup>
+  </Sidebar>
 
-  <!-- Page Content -->
   <main class="flex-1 p-6">
     <slot />
   </main>

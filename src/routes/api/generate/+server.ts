@@ -17,7 +17,7 @@ const getRandomWeightedEntry = <T extends { weight: number }>(entries: T[]): T =
 
 const getSocialStatus = (
   statuses: SocialStatus[],
-  { cultureMod, tiMod }: SocialStatusModifiers,
+  { cultureMod, titleMod }: SocialStatusModifiers,
   allowNoble: boolean = true
 ): SocialStatus => {
   let result: SocialStatus | undefined;
@@ -26,9 +26,7 @@ const getSocialStatus = (
 
   do {
     roll = Math.floor(Math.random() * 100) + 1;
-    finalRoll = roll + cultureMod + tiMod;
-
-    console.log(`Roll: ${roll} + CultureMod: ${cultureMod} + tiMod: ${tiMod} = ${finalRoll}`);
+    finalRoll = roll + cultureMod + titleMod;
 
     result = statuses.find(status => {
       if (!allowNoble && status.name === "Noble") return false;
@@ -41,7 +39,7 @@ const getSocialStatus = (
 
   // Handle Extremely Wealthy chance
   if (result.name === "Wealthy") {
-    const extremeChance = 1 + tiMod;
+    const extremeChance = 1 + titleMod;
     const extremeRoll = Math.floor(Math.random() * 100) + 1;
     if (extremeRoll <= extremeChance) {
       return statuses.find(status => status.name === "Extremely Wealthy")!;
@@ -55,29 +53,29 @@ export async function GET({ url }) {
   const surnameFirst = url.searchParams.get("surnameFirst") === "true";
 
   const genders = await query<Gender>(
-    `SELECT * FROM character_generator.genders`
+    `SELECT * FROM character_generator.genders;`
   );
   const cultures = await query<Culture>(
-    `SELECT * FROM character_generator.cultures`
+    `SELECT * FROM character_generator.cultures;`
   );
   const races = await query<Race>(
-    `SELECT * FROM character_generator.races`
+    `SELECT * FROM character_generator.races;`
   );
   const socialStatuses = await query<SocialStatus>(
-    `SELECT * FROM character_generator.social_statuses`
+    `SELECT * FROM character_generator.social_statuses;`
   );
-  
+
   const gender = getRandomWeightedEntry(genders);
   const culture = getRandomWeightedEntry(cultures);
   const race = getRandomWeightedEntry(races);
-  let tiMod = 0;
+  let titleMod = 0;
   let nobleStatus: SocialStatus | undefined;
-  let socialStatus = getSocialStatus(socialStatuses, {tiMod, cultureMod: culture.culture_mod});
+  let socialStatus = getSocialStatus(socialStatuses, {titleMod, cultureMod: culture.culture_mod});
   if(socialStatus.name === "Noble") {
     //do noble stuff
     nobleStatus = socialStatus;
-    tiMod = 10;
-    socialStatus = getSocialStatus(socialStatuses, {tiMod, cultureMod: culture.culture_mod}, false);
+    titleMod = 10;
+    socialStatus = getSocialStatus(socialStatuses, {titleMod, cultureMod: culture.culture_mod}, false);
   }
 
   const environment = getRandomWeightedEntry(culture.environment as EnvironmentEntry[]);  

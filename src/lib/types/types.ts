@@ -93,7 +93,7 @@ export interface Race {
 
 export interface SocialStatusModifiers {
   cultureMod: number;
-  tiMod: number;
+  titleMod: number;
 }
 
 export interface SocialStatus {

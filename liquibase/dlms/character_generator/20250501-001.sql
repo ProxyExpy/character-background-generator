@@ -92,9 +92,9 @@ INSERT INTO character_generator.social_statuses (
 -- Destitute
 ('Destitute', -3,
     '[
-        { "skill": "Dagger", "rank": { "child": 3, "adolescent": 4 } },
-        { "skill": "Brawling", "rank": { "child": 3, "adolescent": 4 } },
-        { "skill": "Survival", "rank": { "dice": "1d2" } }
+        { "skill": "Dagger", "rank": { "child": 3, "adolescent": 4 }, "chance": 100 },
+        { "skill": "Brawling", "rank": { "child": 3, "adolescent": 4 }, "chance": 100 },
+        { "skill": "Survival", "rank": { "dice": "1d2" }, "chance": 100 }
     ]'::jsonb,
     '[]'::jsonb,
     '[
@@ -110,18 +110,11 @@ INSERT INTO character_generator.social_statuses (
 -- Poor
 ('Poor', -1,
     '[
-        { "skill": "Survival", "rank": 1 }
+        { "skill": "Survival", "rank": 1, "chance": 100 },
+        { "skill": "Street Fighting", "rank": 3, "chance": 50 }
     ]'::jsonb,
     '[]'::jsonb,
-    '[
-        {
-            "chance": 0.50,
-            "when": "adolescent",
-            "grants": [
-                { "skill": "Street Fighting", "rank": 3 }
-            ]
-        }
-    ]'::jsonb,
+    '[]'::jsonb,
     '[]'::jsonb,
     NULL,
     0.5, -0.15, 0.0,
@@ -144,7 +137,7 @@ INSERT INTO character_generator.social_statuses (
 -- Well-to-Do
 ('Well-to-Do', 2,
     '[
-        { "skill": "Survival", "rank": -1 }
+        { "skill": "Survival", "rank": -1, "chance": 100 }
     ]'::jsonb,
     '[]'::jsonb,
     '[]'::jsonb,
@@ -161,7 +154,7 @@ INSERT INTO character_generator.social_statuses (
 -- Wealthy
 ('Wealthy', 4,
     '[
-        { "skill": "Survival", "rank": { "dice": "-1d2" } }
+        { "skill": "Survival", "rank": { "dice": "-1d2" }, "chance": 100 }
     ]'::jsonb,
     '[]'::jsonb,
     '[]'::jsonb,
@@ -181,7 +174,7 @@ INSERT INTO character_generator.social_statuses (
 -- Noble
 ('Noble', 5,
     '[
-        { "skill": "Survival", "rank": -1 }
+        { "skill": "Survival", "rank": -1, "chance": 100 }
     ]'::jsonb,
     '[
         {
@@ -203,7 +196,7 @@ INSERT INTO character_generator.social_statuses (
 -- Extremely Wealthy
 ('Extremely Wealthy', 8,
     '[
-        { "skill": "Survival", "rank": { "dice": "-1d2" } }
+        { "skill": "Survival", "rank": { "dice": "-1d2" }, "chance": 100 }
     ]'::jsonb,
     '[]'::jsonb,
     '[]'::jsonb,
