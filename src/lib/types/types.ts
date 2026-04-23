@@ -111,3 +111,35 @@ export interface SocialStatus {
   literacy_misc: LiteracyMiscEntry[];
   upper_bound: number;
 }
+
+export interface LegitimacyResult {
+  isLegitimate: boolean;
+  checkSiblingsIfNoble: boolean;
+  legitimacyMod?: number;
+  reason?: IllegitimacyReason;
+}
+
+export interface IllegitimacyReason {
+  id?: number;
+  reason: string;
+  know_parent_one_chance: number;
+  know_parent_two_chance: number;
+  mature_toggle?: boolean;
+  upper_bound?: number;
+}
+
+export interface FamilyDynamic {
+  upper_bound: number;
+  description: string;
+  lineage_roll: 'both' | 'maternal' | 'paternal' | 'hi_lo' | null;
+  grandparents_die_size: number | null;
+  aunts_uncles_die_size: number | null;
+  cousins_die_size: number | null;
+  check_guardian: boolean;
+  check_978: boolean;
+  set_social_status_id: number | null;
+  skill_bonuses: { skill: string; rank: { dice: string }; chance: number }[] | null;
+  grandparents?: number;
+  aunts_uncles?: number;
+  cousins?: number;
+}
