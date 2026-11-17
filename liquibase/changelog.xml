@@ -18,5 +18,7 @@
     <include file="dlms/character_generator/20260327-001.sql" relativeToChangelogFile="true" />
     <include file="ddls/character_generator/20260402-001.sql" relativeToChangelogFile="true" />
     <include file="dlms/character_generator/20260402-001.sql" relativeToChangelogFile="true" />
+    <include file="ddls/character_generator/20261015-001.sql" relativeToChangelogFile="true" />
+    <include file="dlms/character_generator/20261015-001.sql" relativeToChangelogFile="true" />
 
 </databaseChangeLog>

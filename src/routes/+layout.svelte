@@ -1,6 +1,6 @@
 <script lang="ts">
   import '../app.css';
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import { Sidebar, SidebarGroup, SidebarItem } from 'flowbite-svelte';
   import {
     HomeSolid,
@@ -9,7 +9,7 @@
   } from 'flowbite-svelte-icons';
 
   // Path-aware reactive highlight
-  $: currentPath = $page.url.pathname;
+  const currentPath = $derived(page.url.pathname);
 
   // Icon mapping
 

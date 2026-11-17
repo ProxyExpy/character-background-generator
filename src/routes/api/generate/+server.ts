@@ -1,148 +1,14 @@
 /* eslint-disable no-useless-assignment */
 import { json } from '@sveltejs/kit';
-import { query } from '$lib/server/database';
-import { insertCharacter } from '$lib/server/mongo';
-import type { Gender, Culture, Race, SocialStatus, SocialStatusModifiers, EnvironmentEntry, LegitimacyResult, IllegitimacyReason, FamilyDynamic } from '$lib/types/types';
-
-const getRandomWeightedEntry = <T extends { weight: number }>(entries: T[]): T => {
-  const totalWeight = entries.reduce((sum, entry) => sum + entry.weight, 0);
-  const random = Math.random() * totalWeight;
-  let cumulativeWeight = 0;
-  for (const entry of entries) {
-    cumulativeWeight += entry.weight;
-    if (random < cumulativeWeight) {
-      return entry;
-    }
-  }
-  return entries[entries.length - 1]; // fallback
-};
-
-const rollDie = (sides: number): number => {
-  return Math.floor(Math.random() * sides) + 1;
-};
-
-const getSocialStatus = (
-  statuses: SocialStatus[],
-  { cultureMod, titleMod }: SocialStatusModifiers,
-  allowNoble: boolean = true
-): SocialStatus => {
-  let result: SocialStatus | undefined;
-  let roll: number;
-  let finalRoll: number;
-
-  do {
-    roll = rollDie(100);
-    finalRoll = roll + cultureMod + titleMod;
-
-    result = statuses.find(status => {
-      if (!allowNoble && status.name === "Noble") return false;
-      return finalRoll <= status.upper_bound;
-    });
-
-    // Fallback to last entry if over bounds (e.g. roll > 107)
-    if (!result) result = statuses[statuses.length - 1];
-  } while (!allowNoble && result.name === "Noble"); // Reroll if Noble is not allowed
-
-  // Handle Extremely Wealthy chance
-  if (result.name === "Wealthy") {
-    const extremeChance = 1 + titleMod;
-    const extremeRoll = rollDie(100);
-    if (extremeRoll <= extremeChance) {
-      return statuses.find(status => status.name === "Extremely Wealthy")!;
-    }
-  }
-
-  return result;
-};
-
-const generateReasonForIllegitimacy105 = async (culture: Culture, matureToggle: boolean): Promise<IllegitimacyReason> => {
-  const reasonRoll = rollDie(20);
-  const reasonTotal = reasonRoll + culture.culture_mod;
-
-  const reason = await query<IllegitimacyReason>(
-    `SELECT reason, know_parent_one_chance, know_parent_two_chance FROM character_generator.illegitimate_reasons
-      WHERE (upper_bound >= ${reasonTotal})
-        AND (mature_toggle = false OR mature_toggle = ${matureToggle})
-      ORDER BY upper_bound ASC NULLS LAST
-      LIMIT 1;`);
-
-  if (reason.length > 0 && reason[0].reason) {
-    return reason[0];
-  } else {
-    return {
-      reason: "{Name} is of unknown parentage, and {subjective_pronoun} was raised in an orphanage.",
-      know_parent_one_chance: 0,
-      know_parent_two_chance: 0,
-    }
-  }
-}
-
-const generateLegitimacy104 = async (culture: Culture, matureToggle: boolean ): Promise<LegitimacyResult> => {
-  const legitimacyRoll = rollDie(20);
-  const legitimacy = legitimacyRoll + culture.culture_mod;
-  if(legitimacy >= 19 || (culture.name === "primitive" && legitimacyRoll === 20)){
-    return {
-      isLegitimate: false,
-      checkSiblingsIfNoble: true,
-      legitimacyMod: rollDie(4),
-      reason: await generateReasonForIllegitimacy105(culture, matureToggle)
-    }
-  } else {
-    return {
-      isLegitimate: true,
-      checkSiblingsIfNoble: false,
-    }
-  }
-}
-
-const generateFamily106 = async (culture: Culture) => {
-  const familyRoll = rollDie(20);
-  const familyTotal = familyRoll + culture.culture_mod;
-  const familyDynamic = await query<FamilyDynamic>(
-    `SELECT upper_bound, description, lineage_roll, grandparents_die_size, aunts_uncles_die_size, 
-          cousins_die_size, check_guardian, check_978, set_social_status_id, skill_bonuses
-      FROM character_generator.family_relations
-      WHERE upper_bound >= ${familyTotal}
-      ORDER BY upper_bound ASC
-      LIMIT 1;`);
-
-  if (familyDynamic.length === 0) {
-    throw new Error(`No family dynamic found for total roll of ${familyTotal}`);
-  }
-
-  const familyStatus = familyDynamic[0]
-
-  console.log("Family Dynamic Roll:", familyRoll, "Total with Culture Mod:", familyTotal);
-  console.log(familyDynamic);
-  if (familyStatus.grandparents_die_size !== null && familyStatus.grandparents_die_size > 0) {
-    const grandparentsRoll = rollDie(familyStatus.grandparents_die_size);
-    familyStatus.description += `, ${grandparentsRoll} grandparent(s).`;
-    familyStatus.grandparents = grandparentsRoll;
-  }
-  if (familyStatus.aunts_uncles_die_size !== null && familyStatus.aunts_uncles_die_size > 0) {
-    const auntsUnclesRoll = rollDie(familyStatus.aunts_uncles_die_size);
-    familyStatus.description += `, ${auntsUnclesRoll} aunt(s)/uncle(s).`;
-    familyStatus.aunts_uncles = auntsUnclesRoll;
-  }
-  if (familyStatus.cousins_die_size !== null && familyStatus.cousins_die_size > 0) {
-    const cousinsRoll = rollDie(familyStatus.cousins_die_size);
-    familyStatus.description += `, ${cousinsRoll} cousin(s).`;
-    familyStatus.cousins = cousinsRoll;
-  }
-
-  if (familyStatus.check_guardian) {
-    console.log("Checking for guardian...");
-    console.log("Table 754: Guardians.");
-  }
-
-  if (familyStatus.check_978) {
-    console.log("Checking for 978...");
-    console.log("Table 978: Family Secrets.");
-  }
-
-  return familyDynamic[0];
-
-}
+import { query } from '#lib/server/database.ts';
+import { insertCharacter } from '#lib/server/mongo.ts';
+import { getRandomWeightedEntry } from '#lib/server/generator/dice.ts';
+import { getSocialStatus } from '#lib/server/generator/socialStatus.ts';
+import { generateLegitimacy104 } from '#lib/server/generator/legitimacy.ts';
+import { generateFamily106, generateSiblings107, generateBirthOrder108 } from '#lib/server/generator/family.ts';
+import { generateTimeOfBirth109 } from '#lib/server/generator/birth.ts';
+import { generateName } from '#lib/server/generator/names.ts';
+import type { Gender, Culture, Race, SocialStatus, EnvironmentEntry } from '#lib/types/types.ts';
 
 export async function GET({ url }) {
   const surnameFirst = url.searchParams.get("surnameFirst") === "true";
@@ -184,19 +50,13 @@ export async function GET({ url }) {
   }
 
   const familyDynamic = await generateFamily106(culture);
+  const siblings = await generateSiblings107(genders);
+  // Orphanage results (Table 106) have the GM roll siblings secretly
+  const siblingsHidden = familyDynamic.check_978;
+  const birthOrder = await generateBirthOrder108(siblings);
+  const timeOfBirth = await generateTimeOfBirth109();
 
-  const [givenName] = await query<{ name: string }>(
-    `SELECT name FROM character_generator.names WHERE is_surname = FALSE AND ${gender.name === 'male' ? 'is_male' : gender.name === 'female' ? 'is_female' : 'is_male AND is_female'} = TRUE ORDER BY RANDOM() LIMIT 1`
-  );
-
-  const [surname] = await query<{ name: string }>(
-    `SELECT name FROM character_generator.names WHERE is_surname = TRUE ORDER BY RANDOM() LIMIT 1`
-  );
-
-  const fullName = surnameFirst
-    ? `${surname?.name ?? 'No Name'} ${givenName?.name ?? ''}`
-    : `${givenName?.name ?? 'No Name'} ${surname?.name ?? ''}`;
-
+  const fullName = await generateName(gender, surnameFirst);
 
   return json({
     name: fullName,
@@ -206,7 +66,10 @@ export async function GET({ url }) {
     socialStatus,
     nobleStatus,
     legitimacyStatus,
-    familyDynamic
+    familyDynamic,
+    siblings: { ...siblings, hidden: siblingsHidden },
+    birthOrder,
+    timeOfBirth
   });
 }
 

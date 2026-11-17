@@ -143,3 +143,36 @@ export interface FamilyDynamic {
   aunts_uncles?: number;
   cousins?: number;
 }
+
+export interface SiblingRow {
+  upper_bound: number;
+  description: string;
+  sibling_dice: string | null;
+  illegitimate_dice: string | null;
+  roll_again: boolean;
+}
+
+export interface Sibling {
+  gender: string;
+  illegitimate: boolean;
+}
+
+export interface SiblingsResult {
+  rolls: number[];
+  descriptions: string[];
+  siblings: Sibling[];
+  isOnlyChild: boolean;
+}
+
+export interface BirthOrder {
+  upper_bound: number;
+  description: string;
+  money_modifier: number;
+}
+
+export interface BirthTimePeriod {
+  calendar: string;
+  name: string;
+  sort_order: number;
+  weight: number;
+}

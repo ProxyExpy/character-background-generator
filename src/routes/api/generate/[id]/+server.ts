@@ -1,4 +1,4 @@
-import { findCharacterById } from '$lib/server/mongo';
+import { findCharacterById } from '#lib/server/mongo.ts';
 import { json } from '@sveltejs/kit';
 
 export async function GET({ params }) {
